@@ -1,7 +1,7 @@
 <template>
   <draggable v-bind="dragOptions" ghost-class="ghost" :list="items" @start="drag = true" @end="endDragging">
-    <transition-group tag="div" class="row" type="transition" :name="!drag ? 'flip-list' : null">
-      <b-col v-for="(v,i) in items" :key="v.id" class="mt-3 d-flex justify-content-center align-items-center" lg="3" md="4" sm="6" cols="12">
+    <transition-group tag="div" class="row mx-5" type="transition" :name="!drag ? 'flip-list' : null">
+      <b-col v-for="(v,i) in items" :key="v.id" class="mt-3 px-0 d-flex justify-content-center align-items-center" lg="3" md="4" sm="6" cols="12">
         <b-overlay blur="" rounded :no-center="shouldNoCenter(v)" :show="showOverlay == v.id " :variant="defineVariant(v)" v-on:mouseleave.native="showOverlay = 0">
           <template #overlay>
             <slot name="buttons" v-bind:item="v" v-bind:index="i"></slot>

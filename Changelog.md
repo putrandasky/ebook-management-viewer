@@ -1,4 +1,9 @@
 # 4 Mei 21
+## 1.0.1
+### Fixing
+1. Reordering in mobile view
+2. switch swipe left/right
+
 ## 1.0.0
 A. Admin Page
 1. Login page

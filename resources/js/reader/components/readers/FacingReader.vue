@@ -9,7 +9,7 @@
             'left':`${updateLeft(v)}px`
             }" @click="openLink(v.address)">
         </div>
-        <v-touch class="w-100 h-100" v-on:swipeleft="onSwipe('left')" v-on:swiperight="onSwipe('right')" style="z-index:101;position:absolute"></v-touch>
+        <v-touch class="w-100 h-100" v-on:swipeleft="onSwipe('right')" v-on:swiperight="onSwipe('left')" style="z-index:101;position:absolute"></v-touch>
       </div>
       <b-overlay v-if="!cropMode" :show="isShowLoader1" blur="" variant="light" class="w-100 h-100 position-absolute"></b-overlay>
       <b-img class="shadow" ref="imageOdd" fluid :src="`/storage/book/${ebook.id}/${imgSrc}`" @click="handleImageOdd" @load="imageLoaded(1)"></b-img>
