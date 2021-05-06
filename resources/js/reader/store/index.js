@@ -204,7 +204,10 @@ export const store = new Vuex.Store({
     }, value) {
       if (value.length == 2) {
         for (let i = 0; i < state.pages.length; i++) {
-          if (state.pages[i].order == value[1] && (state.pages[i].chapter.alias == value[0] || state.pages[i].chapter.order == value[0])) {
+          if (
+            (state.pages[i].order == value[1] && state.pages[i].chapter.alias == value[0] && state.pages[i].chapter.type == 'folder') ||
+            (state.pages[i].order == value[1] && state.pages[i].chapter.order == value[0] && state.pages[i].chapter.type == 'folder')) {
+
             return i;
           }
         }
@@ -212,6 +215,8 @@ export const store = new Vuex.Store({
       if (value.length == 1) {
         for (let i = 0; i < state.pages.length; i++) {
           if (state.pages[i].chapter.alias == value[0] || state.pages[i].chapter.order == value[0]) {
+            console.log('length 1');
+            console.log(i);
             return i;
           }
         }
