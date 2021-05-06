@@ -149,6 +149,9 @@
           })
           .catch((error) => {
             console.log(error);
+            if ([401, 419].includes(error.response.status)) {
+              return
+            }
             this.toastError(error.response.data.errors.bookName[0])
           })
       },
@@ -169,6 +172,9 @@
           })
           .catch((error) => {
             console.log(error);
+            if ([401, 419].includes(error.response.status)) {
+              return
+            }
             if (typeof error.response.data.errors.bookName !== 'undefined') {
               this.toastError(error.response.data.errors.bookName[0])
               return
@@ -184,7 +190,11 @@
 
           })
           .catch((error) => {
-            console.log(error);
+            if ([401, 419].includes(error.response.status)) {
+              return
+            }
+            this.toastError("Ooops, There's Something Error, Try Again Later")
+
           })
       },
       onDelete(i, hasChapter) {
@@ -209,7 +219,9 @@
 
           })
           .catch((error) => {
-            console.log(error);
+            if ([401, 419].includes(error.response.status)) {
+              return
+            }
             this.toastError("Ooops, There's Something Error, Try Again Later")
           })
       },

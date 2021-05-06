@@ -9,6 +9,9 @@ from './store';
 import './filter/filter';
 import draggable from 'vuedraggable'
 import BootstrapVue from 'bootstrap-vue';
+import axios from "axios";
+import InterceptorSetup from './interceptor';
+
 require('./bootstrap');
 Vue.use(BootstrapVue);
 Vue.use(VueRouter);
@@ -37,7 +40,7 @@ Vue.mixin({
     }
   }
 });
-
+InterceptorSetup()
 const app = new Vue({
   el: '#app',
   router,

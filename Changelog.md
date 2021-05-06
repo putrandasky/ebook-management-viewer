@@ -1,4 +1,7 @@
 # 4 Mei 21
+## 1.0.2
+### Fixing
+1. push logout if not authorized
 ## 1.0.1
 ### Fixing
 1. Reordering in mobile view

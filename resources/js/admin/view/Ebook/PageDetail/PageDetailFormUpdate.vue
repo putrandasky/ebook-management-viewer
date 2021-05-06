@@ -45,6 +45,9 @@
 
           })
           .catch((error) => {
+            if ([401, 419].includes(error.response.status)) {
+              return
+            }
             if (typeof error.response.data.errors.name !== 'undefined') {
               this.toastError(error.response.data.errors.name[0])
               return

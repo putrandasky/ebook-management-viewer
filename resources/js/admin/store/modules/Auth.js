@@ -48,7 +48,7 @@ export const actions = {
         });
         if (router.currentRoute.name !== "login")
           router.push({
-            path: "/login"
+            name: "login"
           });
       })
       .catch((error) => {

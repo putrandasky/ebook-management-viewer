@@ -157,7 +157,9 @@
 
           })
           .catch((error) => {
-            console.log(error);
+            if ([401, 419].includes(error.response.status)) {
+              return
+            }
             this.toastError("Ooops, There's Something Error")
           })
       },
@@ -171,7 +173,9 @@
             })
           })
           .catch((error) => {
-            console.log(error);
+            if ([401, 419].includes(error.response.status)) {
+              return
+            }
             this.toastError("Ooops, There's Something Error")
           })
       },
@@ -184,6 +188,9 @@
           })
           .catch((error) => {
             console.log(error);
+            if ([401, 419].includes(error.response.status)) {
+              return
+            }
             this.toastError("Ooops, There's Something Error")
           })
       }
