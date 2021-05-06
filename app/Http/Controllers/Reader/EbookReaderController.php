@@ -39,12 +39,12 @@ class EbookReaderController extends Controller
     }
     public function showCropImage($imageName)
     {
-        $newpathToFile = Storage::disk('local')->getDriver()->getAdapter()->applyPathPrefix("shared/{$imageName}");
+        $newpathToFile = Storage::disk('local')->getDriver()->getAdapter()->applyPathPrefix("public/shared/{$imageName}");
         return response()->file($newpathToFile);
     }
     public function showPdf($pdfname)
     {
-        $newpathToFile = Storage::disk('local')->getDriver()->getAdapter()->applyPathPrefix("pdf/{$pdfname}");
+        $newpathToFile = Storage::disk('local')->getDriver()->getAdapter()->applyPathPrefix("public/pdf/{$pdfname}");
         return response()->file($newpathToFile);
     }
     public function generatePdf($fpdi_class, $first_array, $last_array, $ebook_id, $pages)
