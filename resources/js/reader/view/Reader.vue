@@ -97,7 +97,8 @@
 
             if (typeof this.$route.params.page !== 'undefined') {
               this.$store.dispatch('updateCurrentPageByPageLabel', this.$route.params.page)
-
+              this.loaded = true
+              return
             }
 
             this.loaded = true
