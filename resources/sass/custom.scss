@@ -1,0 +1,164 @@
+.btn-content {
+  position: fixed;
+  top: 100px;
+  left: -27px;
+  z-index: 900;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+
+#sidebar-1 .list-group,
+#sidebar-2 .list-group {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+
+  :hover {
+    background-color: $red;
+    color: #fdfdfd;
+    cursor: pointer;
+  }
+}
+
+#auth-area {
+  height: 100%;
+}
+
+.thumb-view img {
+  cursor: pointer;
+}
+
+#main-toast__toast_outer {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 2001;
+}
+
+#main-toast {
+  width: 350px;
+}
+
+.btn--corner-3 {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  padding: 0rem 0.2rem;
+}
+
+body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  //   overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  position: absolute;
+  display: block;
+  //   visibility: visible;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0;
+  margin: 0;
+
+}
+
+.page-viewer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+  background-image: none;
+  z-index: 100;
+}
+
+.ghost {
+  opacity: 0.5;
+  background: #c8ebfb;
+}
+
+.flip-list-move {
+  transition: transform 0.5s;
+}
+
+.no-move {
+  transition: transform 0s;
+}
+
+.center-h {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.folders-icons {
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+}
+
+.hotlink {
+  position: absolute;
+  cursor: pointer;
+  border-style: none none solid;
+  border-width: 0px;
+  opacity: 0.05;
+
+  &.blink {
+    -webkit-animation: blinks 0.8s;
+    -moz-animation: blinks 0.8s;
+    -o-animation: blinks 0.8s;
+    animation: blinks 0.8s;
+  }
+
+  &:hover {
+    border-style: solid;
+    opacity: 0.3;
+
+  }
+}
+
+@keyframes blinks {
+  0% {
+    opacity: 0.05;
+  }
+
+  10% {
+    opacity: 0.1;
+  }
+
+  30% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  65% {
+    opacity: 0.2;
+  }
+
+  80% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 0.05;
+  }
+}

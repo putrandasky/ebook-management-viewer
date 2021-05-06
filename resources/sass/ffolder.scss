@@ -1,0 +1,147 @@
+/* Variables for default colors and sizes */
+$cyan:#23CBF4;
+$yellow:#FFBD00;
+$pink:#FF7F92;
+$green:#62DE82;
+$gray:#829aa8;
+
+$small:88;
+$medium:176;
+$big:264;
+$xl:352;
+
+$ffolder-colors: () !default;
+
+$ffolder-colors: map-merge((".cyan": $cyan,
+    ".yellow": $yellow,
+    ".pink": $pink,
+    ".green": $green,
+    ".gray": $gray),
+  $ffolder-colors);
+
+$ffolder-width: () !default;
+
+$ffolder-width: map-merge((".small": $small,
+    ".medium": $medium,
+    ".big": $big,
+    ".xl": $xl),
+  $ffolder-width);
+
+@mixin ffolder($width, $color) {
+  $radius: floor(($width * 6.82)/100)*1px;
+  $tabWidth: floor(($width * 9.1)/100);
+  $tabHeight: floor(($width * 36.5)/100);
+  //   $tabHeight: floor(($width * 9.1)/100);
+  //   $tabWidth: floor(($width * 36.5)/100);
+
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  height: $width*1px;
+  width: floor(($width * 70)/100)*1px;
+  //   width: $width*1px;
+  //   height: floor(($width * 70)/100)*1px;
+  background-color: $color;
+  //   margin-top: $tabHeight*1px;
+  border-radius: $radius 0px $radius $radius;
+  //   border-radius: 0px $radius $radius $radius;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -$tabWidth*1px;
+    // top: -$tabHeight*1px;
+    height: $tabHeight*1px;
+    width: $tabWidth*1px;
+    background-color: darken($color, 5%);
+    border-radius: 0px $radius 0px 0px;
+    // border-radius: $radius 0px 0px 0px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    right: -($tabWidth*2)*1px;
+    // top: -($tabHeight*2)*1px;
+    top: ($tabHeight - $tabWidth)*1px;
+    // left: ($tabWidth - $tabHeight)*1px;
+    border: $tabWidth*1px solid transparent;
+    // border: $tabHeight*1px solid transparent;
+    border-left-color: darken($color, 5%);
+    // border-bottom-color: darken($color, 5%);
+  }
+
+  span,
+  i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+
+  span {
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 15px;
+    white-space: nowrap;
+    color: #FFFFFF;
+    background-color: darken($color, 6%);
+  }
+
+  i {
+    font-size: floor(($width * 42.5)/100)*1px;
+    color: darken($color, 6%);
+  }
+}
+
+@each $width,
+$widthvalue in $ffolder-width {
+
+  @each $color,
+  $colorvalue in $ffolder-colors {
+    .ffolder#{$width}#{$color} {
+      @include ffolder($widthvalue, $colorvalue)
+    }
+  }
+}
+
+
+// .ffolder.big.gray {
+//   position: relative;
+//   display: inline-block;
+//   text-align: center;
+//   width: 100%;
+//   height: 100%;
+//   background-color: #829aa8;
+//   margin-right: 24px;
+//   border-radius: 18px 0px 18px 18px;
+// }
+// .ffolder.big.gray:before {
+//   content: "";
+//   display: block;
+//   position: absolute;
+//   /* top: -24px; */
+//   right: -24px;
+//   height: 96px;
+//   width: 24px;
+//   background-color: #738e9e;
+//   border-radius: 0px 28px 0px 0px;
+// }
+
+// .ffolder.big.gray:after {
+//   content: "";
+//   position: absolute;
+//   display: block;
+//   width: 0;
+//   height: 0;
+//   right: -48px;
+//   top: 72px;
+//   /* left: 72px; */
+//   border: 24px solid transparent;
+//   border-left-color: #738e9e;
+// }

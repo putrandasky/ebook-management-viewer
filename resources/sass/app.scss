@@ -1,0 +1,23 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// BootstrapVue
+@import '~bootstrap-vue/dist/bootstrap-vue.css';
+
+//font-awesome
+$fa-font-path: '~font-awesome/fonts/';
+@import '~font-awesome/scss/font-awesome.scss';
+
+
+// ffolder
+@import 'ffolder';
+
+// Variables
+@import 'custom';

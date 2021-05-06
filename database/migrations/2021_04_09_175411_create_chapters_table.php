@@ -15,7 +15,11 @@ class CreateChaptersTable extends Migration
     {
         Schema::create('chapters', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name');
+            $table->string('alias');
+            $table->integer('order');
+            $table->string('type');
+            $table->foreignId('ebook_id');
         });
     }
 
