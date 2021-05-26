@@ -1,6 +1,12 @@
 <template>
   <b-navbar sticky type="light" variant="light" class="shadow-sm " style="z-index:1000">
-    <b-navbar-brand href="#">Ebook Reader</b-navbar-brand>
+    <b-navbar-brand class="mr-auto  d-none d-md-flex" href="#">
+      <b-img style="max-height:30px" src="/images/logo.png" alt="application logo"></b-img>
+    </b-navbar-brand>
+    <b-navbar-brand class="center-h   d-flex d-md-none" href="#">
+      <b-img style="max-height:30px" src="/images/logo.png" alt="application logo"></b-img>
+
+    </b-navbar-brand>
     <b-navbar-nav class="ml-auto ">
       <b-nav-item-dropdown no-caret right>
 

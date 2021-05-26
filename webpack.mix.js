@@ -26,3 +26,16 @@ mix.js('resources/js/reader/app.js', 'public/js/app-reader.js')
 mix.js('resources/js/admin/app.js', 'public/js/app-admin.js')
   .vue();
 // mix.sass('resources/sass/app.scss', 'public/css');
+
+if (mix.inProduction()) {
+  mix.version();
+  mix.options({
+    terser: {
+      terserOptions: {
+        compress: {
+          drop_console: true
+        }
+      }
+    }
+  });
+}

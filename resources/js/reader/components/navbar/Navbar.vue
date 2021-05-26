@@ -5,8 +5,13 @@
         <i class="fa fa-list"></i>
       </b-btn>
     </b-navbar-nav>
-    <b-navbar-brand class="mr-auto  d-none d-md-flex" href="#">Ebook Reader</b-navbar-brand>
-    <b-navbar-brand class="center-h   d-flex d-md-none" href="#">Ebook Reader</b-navbar-brand>
+    <b-navbar-brand class="mr-auto  d-none d-md-flex" href="#">
+      <b-img style="max-height:30px" src="/images/logo.png" alt="application logo"></b-img>
+    </b-navbar-brand>
+    <b-navbar-brand class="center-h   d-flex d-md-none" href="#">
+      <b-img style="max-height:30px" src="/images/logo.png" alt="application logo"></b-img>
+
+    </b-navbar-brand>
 
     <b-navbar-nav class="center-h d-none d-md-flex" v-if="!cropMode">
       <navbar-toggle-view />

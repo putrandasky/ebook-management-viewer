@@ -1,4 +1,8 @@
 # 4 Mei 21
+## 1.1
+### Added
+1. readme
+2. Logo application
 ## 1.0.2
 ### Fixing
 1. push logout if not authorized

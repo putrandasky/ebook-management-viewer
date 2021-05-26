@@ -18,10 +18,10 @@ class CreateHotspotlinksTable extends Migration
             $table->string('address');
             $table->float('area_height', 9, 2);
             $table->float('area_width', 9, 2);
-            $table->float('area_edge_top', 9, 2);
-            $table->float('area_edge_left', 9, 2);
-            $table->float('area_center_top', 9, 2);
-            $table->float('area_center_left', 9, 2);
+            $table->float('area_top', 9, 2);
+            $table->float('area_left', 9, 2);
+            $table->float('parent_height', 9, 2);
+            $table->float('parent_width', 9, 2);
             $table->foreignId('page_id');
         });
     }

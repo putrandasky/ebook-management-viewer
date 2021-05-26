@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
  */
+Route::get('/readme', function () {
+    return view('readme');
+});
+
 Route::get('/shared/{imageName}', [Controllers\Reader\EbookReaderController::class, 'showCropImage']);
 Route::get('/pdf/{pdfname}', [Controllers\Reader\EbookReaderController::class, 'showPdf']);
 Route::post('/generatepdf/entire', [Controllers\Reader\EbookReaderController::class, 'generateEntirePdf']);
