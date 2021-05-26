@@ -82,9 +82,12 @@ After make sure all the server requirement and application folder is stored in t
 ```
 composer install
 ```
+```
+npm install
+```
 please make sure the server already installed [Composer](https://getcomposer.org/download/)
 
-After downloading dependencies complete modify .env file (or rename .env.example to .env and modify after it)
+and also Install [NodeJs](https://www.freecodecamp.org/news/how-to-install-node-js-on-ubuntu-and-update-npm-to-the-latest-version/)
 ```
 APP_NAME=yourwebname
 APP_ENV=production

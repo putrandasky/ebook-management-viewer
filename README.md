@@ -28,8 +28,12 @@ This app is using on top Laravel Framework 8 with few server requirements as bel
 - MYSQL
 - Imagick / GD Extension
 - Composer
+- Node.js
 
 > Please make sure you know how to configure a server with nginx
+
+
+
 
 For server configuration please refer to Laravel documentation [here](https://laravel.com/docs/8.x/deployment#nginx)
 
@@ -81,8 +85,13 @@ After make sure all the server requirement and application folder is stored in t
 ```
 composer install
 ```
+```
+npm install
+```
 please make sure the server already installed [Composer](https://getcomposer.org/download/)
 
+and also Install   [NodeJs](https://www.freecodecamp.org/news/how-to-install-node-js-on-ubuntu-and-update-npm-to-the-latest-version/)
+ 
 After downloading dependencies complete modify .env file (or rename .env.example to .env and modify after it)
 ```
 APP_NAME=yourwebname
